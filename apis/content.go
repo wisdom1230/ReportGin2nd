@@ -112,3 +112,20 @@ var Order = map[string][]string{
 	"CapacityUtilizationCenter":   append(CommonIndexes, []string{"总产能", "平均每日生产量", "产能利用率", "设备数量", "直接生产人员"}...),
 }
 
+type conform struct {
+	Quarter       string `json:"quarter" form:"quarter" binding:"required"`
+	Index         string `json:"index" form:"index" binding:"required"`
+	Department    string `json:"department" form:"department" binding:"required"`
+	Id            string `json:"id" form:"id" binding:"required"`
+	Performance   string `json:"performance" form:"performance" binding:"required"`
+	Creation      string `json:"creation" form:"creation" binding:"required"`
+	Certification string `json:"certification" form:"certification" binding:"required"`
+}
+
+type ReturnDisplay struct {
+	Date   string `json:"date" form:"date" binding:"required"`
+	Index  string `json:"index" form:"index" binding:"required"`
+	File   string `json:"file" form:"file" binding:"required"`
+	Number string `json:"number" form:"number" binding:"required"`
+	Unit   string `json:"unit" form:"unit" binding:"required"`
+}
